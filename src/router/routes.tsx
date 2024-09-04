@@ -1,10 +1,10 @@
 import { RouteObject, createBrowserRouter } from "react-router-dom";
-import App from "../App";
+import Home from "../views/home/Home";
 
 export const Routes: RouteObject[] = [
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
     children: [],
   },
 ];

@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Estedad";
+    src: url("/src/fonts/estedad/Estedad-Thin.ttf") format("truetype");
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: "Estedad";
+    src: url("/src/fonts/estedad/Estedad-Light.ttf") format("truetype");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Estedad";
+    src: url("/src/fonts/estedad/Estedad-Medium.ttf") format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Estedad";
+    src: url("/src/fonts/estedad/Estedad-Bold.ttf") format("truetype");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Estedad";
+    src: url("/src/fonts/estedad/Estedad-Black.ttf") format("truetype");
+    font-weight: 900;
+  }
+  @font-face {
+    font-family: "Estedad";
+    src: url("/src/fonts/estedad/Estedad-VF.ttf") format("truetype");
+    font-weight: 400;
+  }
+
+  * {
+    font-family: Estedad;
+  }
+}
