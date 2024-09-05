@@ -20,7 +20,7 @@ const FAQs: FAQTYPE[] = [
 function FAQ() {
   return (
     <div className="bg-c-pink-50 rounded-[20px] w-5/6 mx-auto flex flex-col items-center">
-      <h3 className="bg-white rounded-b-full text-[53px] py-0 px-14 translate-y-[-25%]">سوالات متداول</h3>
+      <h3 className="bg-white rounded-b-full text-[53px] py-0 px-14 ">سوالات متداول</h3>
 
       <div className="accordion-group px-20 mt-16">
         {
