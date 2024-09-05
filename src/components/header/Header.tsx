@@ -1,7 +1,7 @@
 // In the name of ALLAH!
 // Mahdi Salehi
 
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 import userIcon from "./assets/user.svg"
 import shopIcon from "./assets/shop.svg"
@@ -18,7 +18,7 @@ interface tab {
 const tabs : tab[] = [
   {path: "/", title: "صفحه اصلی", customClasses: ""},
   {path: "/", title: "دسته بندی", customClasses: ""},
-  {path: "/", title: "باشگاه مشتریان", customClasses: "text-[#E14A60]"},
+  {path: "/", title: "باشگاه مشتریان", customClasses: "text-[#E14A60] border-c-pink"},
   {path: "/", title: "درباره ما", customClasses: ""},
   {path: "/", title: "تماس با ما", customClasses: ""},
 ]
@@ -31,10 +31,12 @@ function Header() {
       <nav>
         {
           tabs.map(({ path, title, customClasses }) => (
-            <NavLink
-              to={path}
-              className={`mx-2 text-[20px] ${customClasses}`}
-            >{title}{" "}</NavLink>
+            <>
+              <NavLink
+                to={path}
+                className={`mx-2 text-[20px] transition-all duration-100 ease-linear hover:border-b-4 ${customClasses}`}
+              >{title}</NavLink>{" "}
+            </>
           ))
         }
       </nav>
@@ -44,14 +46,14 @@ function Header() {
           <img src={searchIcon} alt="search-icon" />
         </div>
 
-        <div className="flex flex-col items-center mx-4">
+        <Link to="/" className="flex flex-col items-center mx-4">
           <img src={shopIcon} alt="shop-icon" />
           <span className="text-[15px] mt-3">سبد خرید</span>
-        </div>
-        <div className="flex flex-col items-center mx-4">
+        </Link>
+        <Link to="/" className="flex flex-col items-center mx-4">
           <img src={userIcon} alt="user-icon" />
           <span className="text-[15px] mt-3">ورود/ثبت نام</span>
-        </div>
+        </Link>
       </div>
     </div>
   )

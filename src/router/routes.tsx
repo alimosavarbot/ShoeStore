@@ -1,9 +1,10 @@
 import { RouteObject, createBrowserRouter } from "react-router-dom";
 import Home from "../views/home/Home";
+import { HOME } from "../constants/routerLinks";
 
 export const Routes: RouteObject[] = [
   {
-    path: "/",
+    path: HOME,
     element: <Home />,
     children: [],
   },
