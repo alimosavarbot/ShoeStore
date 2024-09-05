@@ -28,6 +28,7 @@ const tabs: tab[] = [
 function Header() {
   return (
     <div>
+      {/* Mobile Section */}
       <div className="flex items-center justify-between sm:hidden">
         <div className="dropdown">
           <label
@@ -49,7 +50,7 @@ function Header() {
                     className={`dropdown-item text-sm mx-2 text-right ${customClasses}`}
                   >
                     {title}
-                  </NavLink>{" "}
+                  </NavLink>
                 </>
               ))}
             </nav>
@@ -59,7 +60,8 @@ function Header() {
         <p className="text-[20px] text-c-pink">لوگو</p>
       </div>
 
-      <div className="hidden sm:flex justify-around mt-2 ">
+      {/* Desktop Section */}
+      <div className="hidden sm:flex justify-around mt-2">
         <div className="flex gap-3">
           <p className="text-[40px] text-c-pink">لوگو</p>
 

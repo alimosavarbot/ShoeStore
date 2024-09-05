@@ -5,6 +5,7 @@
 @layer base {
   html {
     @apply text-xs;
+    @apply sm:text-sm;
     @apply m-5;
   }
 
