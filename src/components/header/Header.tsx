@@ -6,16 +6,17 @@ import { Link, NavLink } from "react-router-dom"
 import userIcon from "./assets/user.svg"
 import shopIcon from "./assets/shop.svg"
 import searchIcon from "./assets/search.svg"
+import React from "react"
 
 
 
-interface tab {
+interface Tab {
   path: string
   title: string
   customClasses: string
 }
 
-const tabs : tab[] = [
+const tabs : Tab[] = [
   {path: "/", title: "صفحه اصلی", customClasses: ""},
   {path: "/", title: "دسته بندی", customClasses: ""},
   {path: "/", title: "باشگاه مشتریان", customClasses: "text-[#E14A60] border-c-pink"},
@@ -30,13 +31,13 @@ function Header() {
 
       <nav>
         {
-          tabs.map(({ path, title, customClasses }) => (
-            <>
+          tabs.map(({ path, title, customClasses } : Tab, index) => (
+            <React.Fragment key={index}>
               <NavLink
                 to={path}
                 className={`mx-2 text-[20px] transition-all duration-100 ease-linear hover:border-b-4 ${customClasses}`}
               >{title}</NavLink>{" "}
-            </>
+            </React.Fragment>
           ))
         }
       </nav>
