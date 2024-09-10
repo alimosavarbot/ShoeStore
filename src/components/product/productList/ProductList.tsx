@@ -1,7 +1,7 @@
 // In the name of ALLAH!
 // Mahdi Salehi
 
-import DiscountedProduct from "../../components/product/DiscountedProduct"
+import DiscountedProduct from "../../components/product/singleProduct/DiscountedProduct"
 
 
 
