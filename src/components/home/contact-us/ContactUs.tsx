@@ -2,11 +2,11 @@
 // Mahdi Salehi
 
 
-import telegramIcon from "./assets/telegram.svg"
-import instagramIcon from "./assets/instagram.svg"
-import whatsappIcon from "./assets/whatsapp.svg"
-import youtubeIcon from "./assets/youtube.svg"
-import threadsIcon from "./assets/threads.svg"
+import telegramIcon from "../../../assets/images/telegram.svg"
+import instagramIcon from "../../../assets/images/instagram.svg"
+import whatsappIcon from "../../../assets/images/whatsapp.svg"
+import youtubeIcon from "../../../assets/images/youtube.svg"
+import threadsIcon from "../../../assets/images/threads.svg"
 
 
 interface Icon {

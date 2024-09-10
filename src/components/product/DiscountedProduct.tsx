@@ -3,9 +3,9 @@
 
 
 
-import shoeImg from "../assets/shoe.png"
+import shoeImg from "../../assets/images/shoe.png"
 
-import shopIcon from "../../home/header/assets/shop.svg"
+import shopIcon from "../../assets/images/shop.svg"
 
 
 
@@ -48,8 +48,9 @@ const init : DiscountedProductProps = {
   } = init
 
   return (
+    // hover:scale-105 transition-all duration-100
     <div
-      className="relative rounded-3xl max-w-[360px]"
+      className="relative rounded-3xl max-w-[360px] hover:scale-105 transition-all duration-200"
       style={{ boxShadow: "2px 2px 8px 0px #999" }}
     >
 
@@ -62,29 +63,45 @@ const init : DiscountedProductProps = {
       <img
         src={img}
         alt="shoe-image"
-        className="-translate-y-1/4 mx-auto mb-[-10%] z-10"
+        className="-translate-y-1/4 mx-auto mb-[-10%] z-10 cursor-pointer"
+        onClick={() => alert("محصول انتخاب شد")}
       />
 
       <div className="px-3 relative z-10">
         {/* Title */}
-        <p className="text-center text-3xl">{title}</p>
+        <p className="text-center text-3xl overflow-hidden overflow-ellipsis whitespace-nowrap">{title}</p>
 
         {/* Description */}
         <p className="text-center text-lg my-5">{description}</p>
 
         {/* Operations */}
         <div className="flex">
-          <img src={shopIcon} alt="shop-icon" className="mx-2" />
+          <img
+            src={shopIcon}
+            alt="shop-icon"
+            className="mx-2 cursor-pointer"
+            onClick={() => alert("محصول به سبد خرید اضافه شد")}
+          />
 
           <div className="mx-auto flex items-center">
             {
               colors.map(color => (
-                <span style={{ backgroundColor: color }} className="block w-7 h-7 rounded-full mx-1" />
+                <span
+                  style={{ backgroundColor: color }}
+                  className="block w-7 h-7 rounded-full mx-1 cursor-pointer"
+                  onClick={() => alert(`رنگ ${color} انتخاب شد`)}
+                />
               ))
             }
           </div>
 
-          <button className="bg-c-pink text-xl font-bold py-2 px-2 rounded-xl ms-auto">مشاهده بیشتر</button>
+          <button
+            type="button"
+            className="bg-c-pink text-xl font-bold py-2 px-2 rounded-xl ms-auto"
+            onClick={() => alert("مشاهده بیشتر")}
+          >
+            مشاهده بیشتر
+          </button>
         </div>
 
         {/* Price & Discount */}
