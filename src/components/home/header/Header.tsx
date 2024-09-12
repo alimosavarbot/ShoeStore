@@ -43,15 +43,14 @@ function Header() {
             <a className="dropdown-item text-sm">Subscriptions</a> */}
 
             <nav>
-              {tabs.map(({ path, title, customClasses }) => (
-                <>
-                  <NavLink
-                    to={path}
-                    className={`dropdown-item text-sm mx-2 text-right ${customClasses}`}
-                  >
-                    {title}
-                  </NavLink>
-                </>
+              {tabs.map(({ path, title, customClasses }, index) => (
+                <NavLink
+                  key={index}
+                  to={path}
+                  className={`dropdown-item text-sm mx-2 text-right ${customClasses}`}
+                >
+                  {title}
+                </NavLink>
               ))}
             </nav>
           </div>
@@ -66,15 +65,14 @@ function Header() {
           <p className="text-[40px] text-c-pink">لوگو</p>
 
           <nav>
-            {tabs.map(({ path, title, customClasses }) => (
-              <>
-                <NavLink
-                  to={path}
-                  className={`mx-2 transition-all duration-100 ease-linear hover:border-b-4 md:text-lg ${customClasses}`}
-                >
-                  {title}
-                </NavLink>{" "}
-              </>
+            {tabs.map(({ path, title, customClasses }, index) => (
+              <NavLink
+                key={index}
+                to={path}
+                className={`mx-2 transition-all duration-100 ease-linear hover:border-b-4 md:text-lg ${customClasses}`}
+              >
+                {title}
+              </NavLink>
             ))}
           </nav>
         </div>
