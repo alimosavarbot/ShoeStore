@@ -2,9 +2,10 @@ import Baner from "../../components/home/baner/Baner";
 import ContactUs from "../../components/home/contact-us/ContactUs";
 import FAQ from "../../components/home/FAQ/FAQ";
 import Header from "../../components/home/header/Header";
-import DiscountedProduct from "../../components/product/DiscountedProduct";
-import NormalProduct from "../../components/product/NormalProduct";
-import ProductList from "../product/ProductList";
+import DiscountedProduct from "../../components/product/singleProduct/DiscountedProduct";
+import NormalProduct from "../../components/product/singleProduct/NormalProduct";
+import ProductList from "../../components/product/productList/ProductList";
+import ShoppingCard from "../../components/shop/ShoppingCard/ShoppingCard";
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
       {/* <ContactUs /> */}
       {/* <NormalProduct /> */}
       {/* <DiscountedProduct /> */}
-      <ProductList />
+      {/* <ProductList /> */}
+      <ShoppingCard />
     </div>
   );
 };
