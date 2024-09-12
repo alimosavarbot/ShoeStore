@@ -6,21 +6,9 @@ import invoiceIcon from "../../../assets/images/invoice.svg"
 import locationIcon from "../../../assets/images/location.svg"
 import shoppingCardIcon from "../../../assets/images/shopping-card.svg"
 import shoeImg from "../../../assets/images/shoe.png"
-import ShoppingCardItem from "../ShoppingCardItem/ShoppingCardItem"
-
+import ShoppingCardItem, { boughtItemType } from "../ShoppingCardItem/ShoppingCardItem"
 
 type currentStateType = "buy" | "location" | "send"
-
-export interface boughtItemType {
-  img: string
-  title: string
-  brand: string
-  price: string
-  color: string
-  size: number
-  total: number
-  id: number
-}
 
 
 const defaultItems : boughtItemType[] = [

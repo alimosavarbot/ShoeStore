@@ -2,8 +2,18 @@
 // Mahdi Salehi
 
 import { ChangeEvent, useEffect, useState } from "react"
-import { boughtItemType } from "../ShoppingCard/ShoppingCard"
 
+
+export interface boughtItemType {
+  img: string
+  title: string
+  brand: string
+  price: string
+  color: string
+  size: number
+  total: number
+  id: number
+}
 
 interface ShoppingCardItemProps {
   item: boughtItemType
