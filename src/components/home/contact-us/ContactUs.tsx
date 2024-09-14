@@ -25,7 +25,7 @@ const icons : Icon[] = [
 
 function ContactUs() {
   return (
-    <div className="fixed left-40 top-1/2 translate-y-[-50%] rounded-full bg-c-blue px-2 py-4">
+    <div className="fixed left-40 top-1/2 translate-y-[-50%] rounded-full bg-c-blue-80 px-2 py-4">
       {
         icons.map(({ src, alt, href } : Icon, index) => 
           <div className="w-[40px] mb-4 last:mb-0" key={index}>

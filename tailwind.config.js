@@ -6,7 +6,9 @@ export default {
       colors: {
         "c-pink": "#E36D7E",
         "c-pink-50": "#E36D7E80",
-        "c-blue": "#6361CFCC",
+        "c-pink-80": "#E36D7ECC",
+        "c-blue-80": "#6361CFCC",
+        "c-blue": "#6361CF",
       }
     },
   },
