@@ -9,14 +9,14 @@ import heartIcon from "../../assets/images/heart.svg"
 interface NormalProductProps {
   img: string
   title: string
-  price: string
+  price: number
   colors: string[]
 }
 
 const init : NormalProductProps = {
   img : shoeImg,
   title : "کفش وینو مدل 5931",
-  price : "780/000",
+  price : 780000,
   colors : [
     "red",
     "blue",
@@ -87,7 +87,7 @@ function NormalProduct() {
             className="mx-2 cursor-pointer"
             onClick={() => alert("محصول به سبد خرید اضافه شد")}
           />
-          <span className="ms-auto">{price} تومان</span>
+          <span className="ms-auto">{price.formatPrice()} تومان</span>
         </div>
       </div>
     </div>

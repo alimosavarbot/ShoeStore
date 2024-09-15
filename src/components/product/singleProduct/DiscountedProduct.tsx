@@ -14,8 +14,8 @@ interface DiscountedProductProps {
   title: string
   description: string
   discountPercent: string
-  price: string
-  discountedPrice: string
+  price: number
+  discountedPrice: number
   colors: string[]
 }
 
@@ -24,8 +24,8 @@ const init : DiscountedProductProps = {
   title : "کفش وینو مدل 5931",
   description : "لورم ایپسوم متن ساختگی با نماد ساختگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
   discountPercent : "15",
-  price : "780/000",
-  discountedPrice : "633/000",
+  price : 780000,
+  discountedPrice : 633000,
   colors : [
     "red",
     "blue",
@@ -106,8 +106,8 @@ const init : DiscountedProductProps = {
 
         {/* Price & Discount */}
         <div className="flex text-2xl flex-wrap text-nowrap my-4">
-          <span>{discountedPrice} تومان</span>
-          <del className="ms-auto">{price} تومان</del>
+          <span>{discountedPrice.formatPrice()} تومان</span>
+          <del className="ms-auto">{price.formatPrice()} تومان</del>
         </div>
       </div>
     </div>
