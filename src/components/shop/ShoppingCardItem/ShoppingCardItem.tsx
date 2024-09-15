@@ -1,14 +1,15 @@
 // In the name of ALLAH!
 // Mahdi Salehi
 
-import { ChangeEvent, useEffect, useState } from "react"
+import { ChangeEvent } from "react"
 
 
 export interface boughtItemType {
   img: string
   title: string
   brand: string
-  price: string
+  price: number
+  discountPercent: number
   color: string
   size: number
   total: number
@@ -17,29 +18,28 @@ export interface boughtItemType {
 
 interface ShoppingCardItemProps {
   item: boughtItemType
-  removeItem: Function
+  setItemsHandler(id : number, newTotal: number) : void
 }
 
 
-function ShoppingCardItem({ item, removeItem } : ShoppingCardItemProps) {
-  const [total, setTotal] = useState<number>(item.total)
-  console.log(item.total, total)
+function ShoppingCardItem({ item, setItemsHandler } : ShoppingCardItemProps) {
+
   const increaseHandler = () => {
-    if (total >= 99) {
-      setTotal(99)
+    if (item.total >= 99) {
+      setItemsHandler(item.id, 99)
       return
     }
 
-    setTotal(total + 1)
+    setItemsHandler(item.id, item.total + 1)
   }
 
   const decreaseHandler = () => {
-    if (total <= 0) {
-      setTotal(0)
+    if (item.total <= 0) {
+      setItemsHandler(item.id, 0)
       return
     }
 
-    setTotal(total - 1)
+    setItemsHandler(item.id, item.total - 1)
   }
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -55,15 +55,9 @@ function ShoppingCardItem({ item, removeItem } : ShoppingCardItemProps) {
       value = 0
     }
 
-    setTotal(value)
+    setItemsHandler(item.id, value)
   }
 
-  useEffect(() => {
-    if (total <= 0) {
-      removeItem()
-      alert("محصول از سبد خرید شما حذف شد")
-    }
-  }, [total])
 
   return (
     <div className="flex justify-evenly border border-black p-4 m-10 w-full h-64">
@@ -92,14 +86,14 @@ function ShoppingCardItem({ item, removeItem } : ShoppingCardItemProps) {
 
         <div className="flex items-center pt-1">
           <button className="text-5xl font-extralight" onClick={increaseHandler}>+</button>
-          <input type="number" name="item-$id" id="item-$id" min={0} max={100} value={total} onChange={changeHandler} className="text-center w-12 border border-black rounded text-lg pt-1 h-7 mx-5" />
+          <input type="number" name="item-$id" id="item-$id" min={0} max={100} value={item.total} onChange={changeHandler} className="text-center w-12 border border-black rounded text-lg pt-1 h-7 mx-5" />
           <button className="text-5xl font-extralight" onClick={decreaseHandler}>-</button>
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center text-3xl mx-12 ms-auto pb-4">
         <span>قیمت:</span>
-        <span className="mt-2">{item.price}</span>
+        <span className="mt-2">{item.price.formatPrice()}</span>
       </div>
     </div>
   )
