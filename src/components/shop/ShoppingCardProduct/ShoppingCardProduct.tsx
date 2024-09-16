@@ -16,13 +16,13 @@ export interface boughtItemType {
   id: number
 }
 
-interface ShoppingCardItemProps {
+interface ShoppingCardProductProps {
   item: boughtItemType
   setItemsHandler(id : number, newTotal: number) : void
 }
 
 
-function ShoppingCardItem({ item, setItemsHandler } : ShoppingCardItemProps) {
+function ShoppingCardProduct({ item, setItemsHandler } : ShoppingCardProductProps) {
 
   const increaseHandler = () => {
     if (item.total >= 99) {
@@ -99,4 +99,4 @@ function ShoppingCardItem({ item, setItemsHandler } : ShoppingCardItemProps) {
   )
 }
 
-export default ShoppingCardItem
+export default ShoppingCardProduct
