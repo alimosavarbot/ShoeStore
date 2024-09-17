@@ -5,11 +5,12 @@ import { Formik, Field, Form, ErrorMessage, FormikHelpers } from "formik"
 import * as Yup from "yup"
 
 import selectLocationIcon from "../../../assets/images/selectLocation.svg"
+import InputText from "./formElements/InputText"
 
 
 interface FormFields {
   nationalCode: string
-  iranian: boolean
+  notIranian: boolean
   fullName: string
   phoneNumber: string
   state: string
@@ -24,9 +25,10 @@ function ShoppingCardLocationState() {
 
   const validationSchema = Yup.object({
     nationalCode: Yup.string()
+      .matches(/^\d+$/, "کد ملی نا معتبر است")
       .length(11, "طول کد ملی باید 11 رقم باشد")
       .required("لطفا کد ملی را وارد کنید"),
-    iranian: Yup.boolean(),
+    notIranian: Yup.boolean(),
     fullName: Yup.string()
       .required("لطفا نام و نام خانوادگی گیرنده را وارد کنید"),
     phoneNumber: Yup.string()
@@ -49,7 +51,7 @@ function ShoppingCardLocationState() {
 
   const initialValues : FormFields = {
     nationalCode: "",
-    iranian: true,
+    notIranian: false,
     fullName: "",
     phoneNumber: "",
     state: "",
@@ -87,7 +89,69 @@ function ShoppingCardLocationState() {
           onSubmit={onSubmit}
           validationSchema={validationSchema}
         >
-          {/* Form Elements... */}
+          <Form className="">
+            <InputText
+              name="nationalCode"
+              labelText="کد ملی خریدار"
+              className="w-1/2"
+            />
+
+            <div className="my-14">
+              <Field
+                type="checkbox"
+                name="notIranian"
+                className="checkbox border-black after:left-[6px]"
+              />
+              <label
+                htmlFor="notIranian"
+                className="mx-3 opacity-60 font-bold"
+              >تبعه خارجی هستم کد ملی ندارم</label>
+            </div>
+
+            <h5 className="font-bold text-xl mb-8">اطلاعات تحویل گیرنده</h5>
+
+            <InputText
+              name="fullName"
+              labelText="نام و نام خانوادگی تحویل گیرنده"
+              className="w-2/3"
+            />
+
+            <InputText
+              name="phoneNumber"
+              labelText="شماره تماس ضروری"
+              className="w-1/2"
+            />
+
+
+            {  /* اینجا جای استان و شهر است */}
+  
+            <Field name="state" as="select" className="">
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+            </Field>
+
+            <InputText
+              name="address"
+              labelText="آدرس پستی"
+              className="w-2/3"
+            />
+
+            <div className="flex gap-20">
+              <InputText
+                name="postalCode"
+                labelText="کد پستی"
+                className="w-1/2"
+              />
+
+              <InputText
+                name="landingPhone"
+                labelText="شماره تماس ثابت"
+                className="w-1/2"
+              />
+            </div>
+
+          </Form>
         </Formik>
       </div>
     </div>
