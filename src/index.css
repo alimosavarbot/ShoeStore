@@ -58,3 +58,13 @@
     -moz-appearance: textfield;
   }
 }
+
+@layer components {
+  .float-label {
+    @apply absolute right-0
+      transition-all duration-200 ease-linear
+      scale-75 -translate-y-3/4 top-0
+      peer-focus:scale-75 peer-focus:-translate-y-3/4 peer-focus:top-0
+      peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:top-1;
+  }
+}
