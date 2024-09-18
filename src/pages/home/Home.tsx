@@ -3,6 +3,10 @@ import ContactUs from "../../components/home/contact-us/ContactUs";
 import FAQ from "../../components/home/FAQ/FAQ";
 import Header from "../../components/home/header/Header";
 import Slider from "../../components/home/slider/Slider";
+import DiscountedProduct from "../../components/product/singleProduct/DiscountedProduct";
+import NormalProduct from "../../components/product/singleProduct/NormalProduct";
+import ProductList from "../../components/product/productList/ProductList";
+import ShoppingCard from "../../components/shop/shoppingCard/ShoppingCard";
 
 const Home = () => {
   return (
@@ -11,7 +15,13 @@ const Home = () => {
       <Baner />
       <Slider />
       <FAQ />
+      {/* <Baner /> */}
+      {/* <FAQ /> */}
       {/* <ContactUs /> */}
+      {/* <NormalProduct /> */}
+      {/* <DiscountedProduct /> */}
+      {/* <ProductList /> */}
+      {/* <ShoppingCard /> */}
     </div>
   );
 };
