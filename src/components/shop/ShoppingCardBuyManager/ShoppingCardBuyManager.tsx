@@ -2,7 +2,7 @@
 // Mahdi Salehi
 
 import { useState } from "react";
-import { currentStateType } from "../ShoppingCard/ShoppingCard";
+import { currentStateType } from "../shoppingCard/ShoppingCard";
 
 
 interface Props {

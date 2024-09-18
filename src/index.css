@@ -7,6 +7,7 @@
     @apply text-xs;
     @apply sm:text-sm;
     @apply m-5;
+    @apply text-right;
   }
 
   @font-face {
@@ -54,7 +55,7 @@
   }
 
   /* Firefox */
-  input[type=number] {
+  input[type="number"] {
     -moz-appearance: textfield;
   }
 }
@@ -67,4 +68,8 @@
       peer-focus:scale-75 peer-focus:-translate-y-3/4 peer-focus:top-0
       peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:top-1;
   }
+}
+
+.accordion-icon {
+  fill: #8f1515 !important;
 }

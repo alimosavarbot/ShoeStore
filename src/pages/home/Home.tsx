@@ -7,14 +7,16 @@ import DiscountedProduct from "../../components/product/singleProduct/Discounted
 import NormalProduct from "../../components/product/singleProduct/NormalProduct";
 import ProductList from "../../components/product/productList/ProductList";
 import ShoppingCard from "../../components/shop/shoppingCard/ShoppingCard";
+import Footer from "../../components/home/footer/Footer";
 
 const Home = () => {
   return (
-    <div className="mt-4 flex flex-col gap-7">
+    <div className="mt-4 flex flex-col gap-10">
       <Header />
       <Baner />
       <Slider />
       <FAQ />
+      <Footer />
       {/* <Baner /> */}
       {/* <FAQ /> */}
       {/* <ContactUs /> */}
