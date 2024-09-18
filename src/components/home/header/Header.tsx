@@ -81,15 +81,15 @@ function Header() {
 
         <div className="flex items-start">
           <div className="mx-2 me-9">
-            <FaSearch className="w-5 h-5 md:w-7 md:h-7" />
+            <FaSearch className="w-5 h-5" />
           </div>
 
           <Link to="/" className="flex flex-col items-center mx-4">
-            <CiShop className="w-5 h-5 md:w-7 md:h-7" />
+            <CiShop className="w-5 h-5" />
             <span className="mt-3 md:text-lg">سبد خرید</span>
           </Link>
           <Link to="/" className="flex flex-col items-center mx-4">
-            <FaRegUser className="w-5 h-5 md:w-7 md:h-7" />
+            <FaRegUser className="w-5 h-5" />
             <span className="mt-3 md:text-lg">ورود/ثبت نام</span>
           </Link>
         </div>
