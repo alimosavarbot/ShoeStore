@@ -38,7 +38,8 @@ const FAQs: FAQTYPE[] = [
 
 function FAQ() {
   return (
-    <div dir="ltr">
+    <div className="bg-c-pink-80 rounded-xl overflow-hidden" dir="ltr">
+      <p className="flex justify-center text-2xl py-5">سوالات متداول</p>
       <div className="accordion-group accordion-group-bordered flex flex-col gap-1 shadow-2xl">
         {FAQs.map((item) => (
           <div className="accordion ">

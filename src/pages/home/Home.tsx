@@ -11,19 +11,21 @@ import Footer from "../../components/home/footer/Footer";
 
 const Home = () => {
   return (
-    <div className="mt-4 flex flex-col gap-10">
-      <Header />
-      <Baner />
-      <Slider />
-      <FAQ />
+    <div className="">
+      <div className="mt-4 flex flex-col gap-10 m-5">
+        <Header />
+        <Baner />
+        <Slider />
+        <FAQ />
+        {/* <Baner /> */}
+        {/* <FAQ /> */}
+        {/* <ContactUs /> */}
+        {/* <NormalProduct /> */}
+        {/* <DiscountedProduct /> */}
+        {/* <ProductList /> */}
+        {/* <ShoppingCard /> */}
+      </div>
       <Footer />
-      {/* <Baner /> */}
-      {/* <FAQ /> */}
-      {/* <ContactUs /> */}
-      {/* <NormalProduct /> */}
-      {/* <DiscountedProduct /> */}
-      {/* <ProductList /> */}
-      {/* <ShoppingCard /> */}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { FaBookOpen } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-c-blue-80 rounded-md p-4 shadow-lg">
+    <div className="bg-c-pink-80 rounded-t-xl  p-4 shadow-lg !m-0 ">
       <div className="">
         <div className="flex flex-col items-center my-5">
           <p className="text-lg sm:text-2xl">دسترسی سریع</p>
