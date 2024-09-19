@@ -9,7 +9,10 @@ export default {
         "c-pink-80": "#E36D7ECC",
         "c-blue-80": "#6361CFCC",
         "c-blue": "#6361CF",
-      }
+      },
+      rotate: {
+        17: "17deg",
+      },
     },
   },
   plugins: [require("rippleui")],

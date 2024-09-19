@@ -3,49 +3,248 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import shoe from "../../../assets/imgs/shoe.png";
+import { CiShop } from "react-icons/ci";
 
 const Slider = () => {
   return (
-    <div className="mb-8 bg-slate-500 z-0 ">
+    <div className="mb-8   ">
       {/* Desktop Section */}
-      <div className="hidden sm:flex   w-[80%] m-auto">
+      <div className="w-[90%] m-auto">
         <Swiper
-          className=" !z-0 bg-blue-500 h-auto w-auto !relative"
+          className="h-auto w-auto"
           modules={[Navigation]}
-          slidesPerView={3}
           pagination={{
             clickable: true,
           }}
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+            1024: {
+              slidesPerView: 6,
+              spaceBetween: 50,
+            },
+          }}
         >
-          <div className="z-50 !absolute top-0 -right-10">
-            <img className=" w-72 " src={shoe} />
-          </div>
+          <SwiperSlide className="h-[20rem] ">
+            <div className="flex justify-center !items-center h-full ">
+              <div className="rounded-lg shadow-lg absolute bg-slate-100 ">
+                <img
+                  className="w-64 relative -top-6 right-0 -rotate-[17deg]"
+                  src={shoe}
+                />
 
-          <SwiperSlide className=" ">
-            <div className="w-4/5 h-48 rounded-lg shadow-lg text-black bg-slate-200  z-40"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-56 h-48 rounded-lg shadow-lg text-black bg-slate-200">
-              12
+                <div className="flex flex-col m-3 gap-2">
+                  <p>کفش نایک مدل 3874</p>
+
+                  <div className="flex gap-2">
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="زرد"
+                    >
+                      <span className="dot dot-warning cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="سبز"
+                    >
+                      <span className="dot dot-success cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="آبی"
+                    >
+                      <span className="dot dot-primary cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="قرمز"
+                    >
+                      <span className="dot dot-error cursor-pointer"></span>
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between">
+                    <CiShop className="w-5 h-5" />
+
+                    <p>479/000 تومان</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-56 h-48 rounded-lg shadow-lg text-black bg-slate-200">
-              13
+
+          <SwiperSlide className="h-[20rem] ">
+            <div className="flex justify-center !items-center h-full ">
+              <div className="rounded-lg shadow-lg absolute bg-slate-100 ">
+                <img
+                  className="w-64 relative -top-6 right-0 -rotate-[17deg]"
+                  src={shoe}
+                />
+
+                <div className="flex flex-col m-3 gap-2">
+                  <p>کفش نایک مدل 3874</p>
+
+                  <div className="flex gap-2">
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="زرد"
+                    >
+                      <span className="dot dot-warning cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="سبز"
+                    >
+                      <span className="dot dot-success cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="آبی"
+                    >
+                      <span className="dot dot-primary cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="قرمز"
+                    >
+                      <span className="dot dot-error cursor-pointer"></span>
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between">
+                    <CiShop className="w-5 h-5" />
+
+                    <p>479/000 تومان</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-56 h-48 rounded-lg shadow-lg text-black bg-slate-200">
-              14
+
+          <SwiperSlide className="h-[20rem] ">
+            <div className="flex justify-center !items-center h-full ">
+              <div className="rounded-lg shadow-lg absolute bg-slate-100 ">
+                <img
+                  className="w-64 relative -top-6 right-0 -rotate-[17deg]"
+                  src={shoe}
+                />
+
+                <div className="flex flex-col m-3 gap-2">
+                  <p>کفش نایک مدل 3874</p>
+
+                  <div className="flex gap-2">
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="زرد"
+                    >
+                      <span className="dot dot-warning cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="سبز"
+                    >
+                      <span className="dot dot-success cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="آبی"
+                    >
+                      <span className="dot dot-primary cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="قرمز"
+                    >
+                      <span className="dot dot-error cursor-pointer"></span>
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between">
+                    <CiShop className="w-5 h-5" />
+
+                    <p>479/000 تومان</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide className="h-[20rem] ">
+            <div className="flex justify-center !items-center h-full ">
+              <div className="rounded-lg shadow-lg absolute bg-slate-100 ">
+                <img
+                  className="w-64 relative -top-6 right-0 -rotate-[17deg]"
+                  src={shoe}
+                />
+
+                <div className="flex flex-col m-3 gap-2">
+                  <p>کفش نایک مدل 3874</p>
+
+                  <div className="flex gap-2">
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="زرد"
+                    >
+                      <span className="dot dot-warning cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="سبز"
+                    >
+                      <span className="dot dot-success cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="آبی"
+                    >
+                      <span className="dot dot-primary cursor-pointer"></span>
+                    </span>
+
+                    <span
+                      className="tooltip tooltip-top tooltip-primary hover:tooltip-open"
+                      data-tooltip="قرمز"
+                    >
+                      <span className="dot dot-error cursor-pointer"></span>
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between">
+                    <CiShop className="w-5 h-5" />
+
+                    <p>479/000 تومان</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
         </Swiper>
       </div>
 
       {/* Mobile Section */}
-      <div className="flex items-center justify-between sm:hidden">
+      {/* <div className="flex items-center justify-between sm:hidden">
         Mobile Section
-      </div>
+      </div> */}
     </div>
   );
 };
