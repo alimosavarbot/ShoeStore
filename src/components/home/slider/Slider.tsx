@@ -28,11 +28,8 @@ const Slider = () => {
             768: {
               slidesPerView: 4,
               spaceBetween: 50,
-            },
-            1024: {
-              slidesPerView: 6,
-              spaceBetween: 50,
-            },
+            }
+        
           }}
         >
           <SwiperSlide className="h-[20rem] ">

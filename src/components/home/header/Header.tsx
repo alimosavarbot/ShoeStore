@@ -61,17 +61,17 @@ function Header() {
 
       {/* Desktop Section */}
       <div className="hidden sm:flex justify-around mt-2">
-        <div className="flex gap-3">
+        <div className="flex gap-3 w-[50%]">
           <p className="text-[40px] text-c-pink">لوگو</p>
 
-          <nav>
+          <nav className="w-full">
             {tabs.map(({ path, title, customClasses }, index) => (
               <NavLink
                 key={index}
                 to={path}
-                className={`mx-2 transition-all duration-100 ease-linear hover:border-b-4 md:text-lg ${customClasses}`}
+                className={`mx-2 w-auto transition-all duration-100 ease-linear hover:border-b-4 text-xs sm:text-base md:text-lg ${customClasses}`}
               >
-                {title}
+               <span> {title}</span>
               </NavLink>
             ))}
           </nav>
