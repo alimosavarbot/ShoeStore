@@ -8,7 +8,7 @@ const Baner = () => {
       <span className="text-gray-400 border-b-2 text-2xl sm:text-3xl">
         Luxury Shose Gallery
       </span>
-      <span className="w-1/2 text-center">
+      <span className="w-1/2 text-center leading-6">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
         از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
         سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
