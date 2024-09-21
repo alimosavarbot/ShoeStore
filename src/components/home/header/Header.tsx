@@ -35,7 +35,7 @@ function Header() {
             className="btn btn-xs py-5 btn-solid-primary my-2"
             tabIndex={1}
           >
-            <TiThMenu className="w-7 h-7 text-slate-700" />
+            <TiThMenu className="w-7 h-7 text-slate-500" />
           </label>
           <div className="dropdown-menu dropdown-menu-bottom-left">
             {/* <a className="dropdown-item text-sm">Profile</a>
@@ -56,7 +56,18 @@ function Header() {
           </div>
         </div>
 
-        <p className="text-[20px] text-c-pink">لوگو</p>
+        <div className="flex items-start mt-2">
+          <Link to="/" className="flex flex-col items-center mx-4">
+            <FaSearch className="w-6 h-6" />
+          </Link>
+
+          <Link to="/" className="flex flex-col items-center mx-4">
+            <CiShop className="w-7 h-7" />
+          </Link>
+          <Link to="/" className="flex flex-col items-center mx-4">
+            <FaRegUser className="w-6 h-6" />
+          </Link>
+        </div>
       </div>
 
       {/* Desktop Section */}
@@ -69,9 +80,9 @@ function Header() {
               <NavLink
                 key={index}
                 to={path}
-                className={`mx-2 w-auto transition-all duration-100 ease-linear hover:border-b-4 text-xs sm:text-base md:text-lg ${customClasses}`}
+                className={`mx-2 w-auto transition-all duration-100 ease-linear hover:border-b-4 text-xs sm:text-bas md:text-lg ${customClasses}`}
               >
-               <span> {title}</span>
+                <span> {title}</span>
               </NavLink>
             ))}
           </nav>

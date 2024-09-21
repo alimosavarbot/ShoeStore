@@ -8,6 +8,7 @@ import NormalProduct from "../../components/product/singleProduct/NormalProduct"
 import ProductList from "../../components/product/productList/ProductList";
 import ShoppingCard from "../../components/shop/shoppingCard/ShoppingCard";
 import Footer from "../../components/home/footer/Footer";
+import Offer from "../../components/home/offer/Offer";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <Header />
         <Baner />
         <Slider />
+        <Offer />
         <FAQ />
         {/* <Baner /> */}
         {/* <FAQ /> */}

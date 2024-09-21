@@ -21,11 +21,11 @@ const Slider = () => {
         <div className="flex flex-col items-center gap-2">
           <div className="absolute ">
             {/* stars */}
-            <div className="relative -right-[10rem] sm:-right-[16rem]">
+            <div className="relative -right-[12rem] sm:-right-[16rem]">
               <div className="four-pointed-star"></div>
             </div>
 
-            <div className="relative -right-[12rem] sm:-right-[18rem] top-[3rem]">
+            <div className="relative -right-[14rem] sm:-right-[18rem] top-[3rem]">
               <div className="four-pointed-star"></div>
             </div>
 
@@ -71,7 +71,7 @@ const Slider = () => {
         </div>
 
         {/* details */}
-        <div className="flex flex-col gap-5 mr-[10%]">
+        <div className="flex flex-col gap-5 mr-[10%] mb-5">
           <div className="flex flex-col gap-2">
             <span className="text-lg sm:text-2xl">قیمت:</span>
             <p className="text-sm sm:text-lg">348/000 تومان</p>
